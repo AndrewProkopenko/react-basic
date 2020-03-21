@@ -1,0 +1,109 @@
+.weather-container { 
+    .item {  
+        margin-top: 100px;
+        margin-bottom: 50px;
+        color: #dce0ff;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .first {   
+           h3 { 
+            font-size: 4rem;
+            font-weight: 900;
+            color: #4c505d;
+           }
+           p { 
+               opacity: .6;
+           }
+           form { 
+               margin-top: 40px;
+               ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: #dce0ff;
+                }
+                ::-moz-placeholder { /* Firefox 19+ */
+                    color: #dce0ff;
+                }
+                :-ms-input-placeholder { /* IE 10+ */
+                    color: #dce0ff;
+                }
+                :-moz-placeholder { /* Firefox 18- */
+                    color: #dce0ff;
+                }
+               input { 
+                    background: none;
+                    outline: none;
+                    border: 1px solid #9295aa;
+                    padding: 10px 15px;
+                    color: #dce0ff;
+               }
+               button { 
+                    padding: 10px 15px;
+                    border: 1px solid #9295aa;
+                    border-left: none;
+                    color: #dce0ff;
+                    outline: none;
+                    background: #4c505d;
+               }
+           }
+        }
+        .last {
+            display: flex;
+            align-items: center;
+
+            padding-left: 15px;
+            div { 
+                p { 
+                    margin: 0;
+                }
+            }
+            .location { 
+                display: flex;
+                align-items: center;
+                p:first-child {
+                    white-space: nowrap;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    color: #98a0b4;
+                    display: flex;
+                    align-items: center;
+                    svg { 
+                        font-size: 1rem;
+                        margin-right: 5px;
+                    }
+                }
+                p:last-child {
+                    margin-left: 10px;
+                    font-size: 2.2rem;
+                    font-weight: 900;
+                    color: #d9dde9;
+                }
+            }
+            .temp { 
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #d9dde9;
+            }
+            .sky { 
+                font-size: 4rem;
+                font-weight: 400;
+            }
+         }
+    }
+}
+
+@media screen and (max-width: 772px) { 
+    .weather-container { 
+        .item {  
+            flex-direction: column;
+            align-items: flex-start;
+            .last { 
+                margin-top: 50px;
+                padding: 0;
+            }
+        }
+
+            
+    }
+}

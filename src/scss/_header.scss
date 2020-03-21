@@ -1,0 +1,80 @@
+header { 
+    background: #282c34;
+    color: #dce0ff;
+    border-bottom: 1px solid #dce0ff1a;
+    .head { 
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 50px 0;
+         
+        .logo { 
+            font-family: 'Satisfy', cursive; 
+            font-size: 1.5rem;
+        }
+        .menu { 
+            ul { 
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                li { 
+                    list-style: none;
+                    display: inline-block;
+                    margin-left: 15px;
+                    &:first-child { 
+                        margin-left: 0;
+                    }
+                    a.active::after {  
+                        transform: translateY(0) scaleX(1);
+                    }
+                    a { 
+                        color: #dce0ff;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        transition: 300ms ease;
+                        padding: 5px 10px;
+
+                        font-size: 1rem;
+                        font-weight: 600;
+                    
+                        display: inline-block;
+                        position: relative;
+                        &::after {  
+                            content: '';  
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #48a2bb;
+                            opacity: 0.5;
+                            transform: translateY(100%) scaleX(0);
+                            transition: 200ms ease-in;
+                        }
+                        &:hover::after {  
+                            transform: translateY(0) scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 772px) { 
+    header {  
+        .head {  
+            .menu { 
+                ul {  
+                    li {  
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
