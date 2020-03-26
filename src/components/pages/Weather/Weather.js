@@ -9,6 +9,7 @@ const API_KEY = "3b0463098dbac98a9fdbed1d1360b66c";
 class Weather extends Component {
 
     state = { 
+        icon: undefined,
         temp: undefined,
         city: undefined,
         country: undefined,
@@ -26,14 +27,23 @@ class Weather extends Component {
             .then( (response) => { 
                 console.log(response.data);
                 this.setState( { 
+                    icon: response.data.weather[0].icon,
                     temp: response.data.main.temp, 
                     city: response.data.name,
                     country: response.data.sys.country, 
-                    sky: response.data.weather[0].main, 
-                    error: ""        
+                    sky: response.data.weather[0].main,  
+                    error: undefined
                 })
             })
             .catch((error) => {  
+                this.setState( {
+                    icon: undefined,
+                    temp: undefined,
+                    city: undefined,
+                    country: undefined,
+                    sky: undefined,
+                    error: "Ups... "
+                })
                 console.log(error + 'its my little catch ');
         })
       
@@ -80,6 +90,7 @@ class Weather extends Component {
                            </div>
                            
                             <Response 
+                                icon={ this.state.icon}
                                 temp={this.state.temp}
                                 city={this.state.city}
                                 country={this.state.country}

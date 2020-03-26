@@ -61,6 +61,10 @@ header {
                 }
             }
         }
+        .tools { 
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 }
 

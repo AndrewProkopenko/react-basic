@@ -10,12 +10,14 @@ body, html {
 }
 
 $font-family-sans-serif: 'Montserrat', sans-serif;
+
 @import './../../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Satisfy&display=swap&subset=cyrillic');
 
 @import '_app';
 @import '_header';
 @import '_weather';
+@import '_posts'; 
 
  
 

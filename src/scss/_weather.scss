@@ -8,7 +8,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        .first {   
+        .first {  
+            transition: 500ms ease; 
            h3 { 
             font-size: 4rem;
             font-weight: 900;
@@ -49,6 +50,8 @@
            }
         }
         .last {
+            
+            transition: 500ms ease; 
             display: flex;
             align-items: center;
 
@@ -88,6 +91,24 @@
             .sky { 
                 font-size: 4rem;
                 font-weight: 400;
+                display: flex;
+                align-items: center; 
+                justify-content: flex-start;
+                position: relative;
+                div { 
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+            .icon { 
+                position: absolute;
+                z-index: 1 !important; 
+                right: 0px;
+                width: 100px;
+                height: 100px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
          }
     }

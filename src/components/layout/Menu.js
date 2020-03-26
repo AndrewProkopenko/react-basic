@@ -8,12 +8,12 @@ class Menu extends Component {
         return ( 
             <div className='col-12 col-sm-6 order-sm-1 menu'>
                       
-            <ul className=' flex-md-row'>
+            <ul className=' flex-md-row justify-content-center'>
                 <li>
                     <NavLink exact to={'/'}>Home</NavLink>
                 </li> 
                 <li>
-                    <NavLink exact to={'/contact'}>Contact</NavLink>
+                    <NavLink exact to={'/posts'}>Post</NavLink>
                 </li>
                 <li>
                     <NavLink exact to={'/about'}>About</NavLink>
